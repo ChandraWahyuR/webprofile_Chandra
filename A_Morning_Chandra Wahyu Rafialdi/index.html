@@ -1,11 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Testing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
-    
+    <header class="header" id="header">
+        <a href="#" style="text-decoration: none;" class="logo">
+            <span class="logo-nav" style="color: white;">C</span>
+            <span>hand</span>
+        </a>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skill">Skill</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
+    </header>
+
+    <!-- Home -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Halo Saya, </h3>
+            <h1>Chandra Wahyu R</h1>
+            <h3>Seorang <span><b>Mahasiswa</b></span></h3>
+            <br>
+            <h2>Sedang belajar <span>Web Development</span></h2>
+            <p><b style="font-weight: bold;">Kenapa saya belajar web development?</b><br>karena saya penasaran pakai
+                javascript, saat membuat
+                gateway payment ada salah satu cara pakai js aku ngga paham <br>makanya penasaran belajar</p>
+                <div class="social-media">
+                    <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                </div>
+        </div>
+        <!-- Img -->
+        <div class="home-img">
+            <img src="assets/Gambar.png" alt="Gambar aib">
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="assets/Gambar.png" alt="aib">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Mahasiswa Jurusan Informatika</h3>
+            <p>
+                Saat ini saya adalah seorang mahasiswa dimana sedang mencari fokus bidang pembelajaran dan untuk saat
+                ini sedang mencoba belajar membuat website.
+                <br>Dengan membuat website portofolio berbasis html dan css ini diharpkan saya dapat lebih paham
+                mendisign dan membuat tema website yang tidak ketinggalan zaman.
+                Untuk pembuatan website saya pernah membuat beberapa projek web kecil-kecilan yang menggunakan framework
+                Flask dan Django.
+            </p>
+        </div>
+    </section>
+    <!-- skill -->
+    <section class="skill" id="skill">
+        <h2 class="heading"><span>Soft</span>Skill</h2>
+        <div class="skill-container">
+            <div class="skill-box">
+                <i class='bx bx-desktop'></i>
+                <h3>Web Development</h3>
+                <p>Pernah membuat website tidak dikomersialkan dan saya hanya belajar backend, dengan menggunakan
+                    framework Django dan Flask dari bahasa Python</p>
+            </div>
+            <div class="skill-box">
+                <i class='bx bxl-android'></i>
+                <h3>Mobile App Development</h3>
+                <p>Pernah membuat aplikasi mobile menggunakan bahasa dart dengan framework flutter dalam mengembangkan
+                    mobile app, mulai dari frontend hingga backend</p>
+            </div>
+        </div>
+    </section>
+    <!-- Kontak -->
+    <section class="kontak" id="kontak">
+        <h2 class="heading">Kontak <span>Mu</span></h2>
+        <form action="#">
+            <div class="kontak-input">
+                <input type="number" placeholder="Masukkan Nomor">
+                <input type="email" placeholder="Masukkan Emailmu">
+            </div>
+            <div class="kontak-nama">
+                <input type="text" placeholder="Masukkan Nama panjang" style="width: 300px;">
+            </div>
+            <textarea name="" id="" cols="30" rows="10"
+                placeholder="Ngga ada Backend, jadi buat dekorasi aja"></textarea>
+            <button id="btn-input" class="btn"><a href="#home"></a>Kirim</button>
+        </form>
+    </section>
+
+    <!-- Fotter -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Website latihan oleh Chandra | Masukkan dan saran diperlukan</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt' style="color: white"></i></a>
+        </div>
+    </footer>
 </body>
+<!-- JS satu buat input hilang -->
+<script>
+    const btnHapus = document.getElementById('btn-input');
+    const nomorInput = document.querySelector('input[type="number"]');
+    const emailInput = document.querySelector('input[type="email"]');
+    const namaInput = document.querySelector('input[type="text"]');
+    const textareaInput = document.querySelector('textarea');
+
+    btnHapus.addEventListener('click', function (event) {
+        nomorInput.value = '';
+        emailInput.value = '';
+        namaInput.value = '';
+        textareaInput.value = '';
+    });
+</script>
+
 </html>
